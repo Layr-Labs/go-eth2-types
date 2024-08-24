@@ -25,3 +25,10 @@ func InitBLS() error {
 	}
 	return bls.SetETHmode(bls.EthModeDraft07)
 }
+
+func InitBN254() error {
+	if err := bls.Init(bls.CurveFp254BNb); err != nil {
+		return err
+	}
+	return bls.SetETHmode(bls.EthModeDraft07)
+}
